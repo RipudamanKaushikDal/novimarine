@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.card {
+  background-size: cover;
+  border-radius: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 2px $charcoal;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: 0 8px 8px 0;
+
+  &.home {
+    justify-content: flex-end;
+    min-width: $home_card_width;
+    min-height: $home_card_height;
+    max-width: $home_card_width;
+    max-height: $home_card_height;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &__title {
+      @include set_overlay(180deg, 0, 0.4);
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      margin: 0;
+      color: $white;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}

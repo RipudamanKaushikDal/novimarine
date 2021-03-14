@@ -1,0 +1,36 @@
+// Colors
+$charcoal: #141414;
+$white: rgb(249, 249, 250);
+$sea_blue: #76daff;
+
+// Dimensions
+$home_card_width: 220px;
+$home_card_height: 320px;
+
+@mixin set_overlay($direction, $alpha1, $alpha2) {
+  background: linear-gradient(
+    $direction,
+    rgba($charcoal, $alpha1) 0%,
+    rgba($charcoal, $alpha2) 100%
+  );
+
+  %Button {
+    border-radius: 8px;
+    background: transparent;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    border: 2px solid $white;
+    margin: 10px 0;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      background: $sea_blue;
+      border: none;
+      color: $charcoal;
+    }
+  }
+}
