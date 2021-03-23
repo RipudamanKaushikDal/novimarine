@@ -1,5 +1,5 @@
 import React from 'react'
-import "./About.scss"
+import "./about.scss"
 
 const About = () => {
     return (
@@ -11,8 +11,8 @@ const About = () => {
             <div className="about__header">
                 <h1>About Us</h1>
                 <div>
-                <button className="about__buttons">Start Your Listing</button>
-                <button className="about__buttons">Start Your Request</button>
+                <button>Start Your Listing</button>
+                <button >Start Your Request</button>
                 </div>
             </div>
            <p>While some commercial fishermen don't mind paying commission to a broker, our customers love the fact we give them different options to choose from.

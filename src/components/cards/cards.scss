@@ -5,7 +5,7 @@
   border-radius: 8px;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 2px 2px $charcoal;
+  box-shadow: 0 2px 3px $charcoal;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -21,10 +21,13 @@
 
     &:hover {
       transform: scale(1.03);
+      .card.home__title {
+        @include set_overlay(180deg, 0.4, 0.6);
+      }
     }
 
     &__title {
-      @include set_overlay(180deg, 0, 0.4);
+      @include set_overlay(180deg, 0.2, 0.4);
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
@@ -33,9 +36,40 @@
       border: none;
       outline: none;
       margin: 0;
+      padding: 0;
       color: $white;
       font-size: 20px;
       font-weight: 500;
+    }
+  }
+
+  &.listing {
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    min-height: 450px;
+    max-width: 300px;
+    max-height: 450px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    h2,
+    h3,
+    h4 {
+      margin: 2px;
+    }
+
+    p {
+      margin: 2px;
+      font-size: small;
     }
   }
 }

@@ -48,7 +48,7 @@ $title_font_size: 48px;
     }
 
     button {
-      @extend %Button;
+      @extend %button;
       width: 80%;
 
       &:active {

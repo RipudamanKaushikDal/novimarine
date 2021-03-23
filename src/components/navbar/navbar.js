@@ -20,7 +20,16 @@ const Navbar = () => {
 
     return (
         <div className={ `navbar ${shownav && 'navbar__visible'}`}>
-          <img src = "https://novimarinebrokers.com/images/4/logo_bot.jpg" alt = "logo" />  
+          <div className="navbar__logo">
+            <img src = "https://novimarinebrokers.com/images/4/logo_bot.jpg" alt = "logo" />  
+            <h2>NOVI MARINE</h2>
+          </div>
+          <div className="navbar__links">
+            <p>Home</p>
+            <p>Listings</p>
+            <p>About</p>
+            <p>Contact</p>
+          </div>
         </div>
     )
 }

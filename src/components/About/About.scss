@@ -1,6 +1,5 @@
 @import "../../variables.scss";
 
-
 .parallax {
   background-image: url("../../About.jpg");
   background-attachment: fixed;
@@ -25,10 +24,10 @@
   flex-direction: column;
   padding: 8px;
   height: 100%;
-  margin:0;
+  margin: 0;
   background-color: rgba($color: $charcoal, $alpha: 0.8);
 
-  p{
+  p {
     font-size: 16px;
     font-weight: 500;
   }
@@ -40,28 +39,25 @@
     width: 100%;
     height: 70px;
     margin: 0;
-  }
 
-  &__buttons{
-    border-radius: 8px;
-    background: transparent;
-    color: $white;
-    font-size: 16px;
-    font-weight: 500;
-    height: 40px;
-    border: 2px solid $white;
-    margin: 0 8px;
-    width: 200px;
-    outline: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  
-    &:hover {
-      background: $sea_blue;
-      border: none;
-      color: $charcoal;
+    button {
+      border-radius: 6px;
+      background: transparent;
+      color: $white;
+      font-size: 16px;
+      font-weight: 500;
+      height: 40px;
+      width: 180px;
+      margin: 0 8px;
+      border: 2px solid $white;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        background: $sea_blue;
+        border: 2px solid $sea_blue;
+        color: $charcoal;
+      }
     }
-  
-
   }
 }
