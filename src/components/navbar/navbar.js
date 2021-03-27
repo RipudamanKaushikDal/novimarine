@@ -1,9 +1,11 @@
 import React,{useState,useEffect} from 'react'
+import { useLocation } from 'react-router';
 import "./navbar.scss"
 
 const Navbar = () => {
 
   const [shownav, setShownav] = useState(false);
+  const location = useLocation()
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -19,7 +21,7 @@ const Navbar = () => {
   }, []);
 
     return (
-        <div className={ `navbar ${shownav && 'navbar__visible'}`}>
+        <div className={location.pathname==="/"? `navbar ${shownav && 'navbar__visible'}`: 'navbar navbar__visible'}>
           <div className="navbar__logo">
             <img src = "https://novimarinebrokers.com/images/4/logo_bot.jpg" alt = "logo" />  
             <h2>NOVI MARINE</h2>

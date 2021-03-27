@@ -1,9 +1,10 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 import "./cards.scss"
 
-const Cards = ({type,imageUrl,title,description,price,id,length,width,sternWidth,draft}) => {
+const Cards = ({type,cardClass,imageUrl,title,description,details}) => {
     return (
-        <>
+        <Link to={`search/${cardClass}`}>
         {type === "home" ? (
             <div className={`card ${type}`} style={{backgroundImage:`url(${imageUrl})`}}>
                 <div className={`card ${type}__title`}>
@@ -14,16 +15,13 @@ const Cards = ({type,imageUrl,title,description,price,id,length,width,sternWidth
             <div className={`card ${type}`}>
                 <img src={imageUrl} alt="image" />
                 <h2>{title}</h2>
-                {price && <h3>{price}</h3>}
-                {id && <h4>Listing #{id}</h4>}
-                {length && <h4>Length: {length}</h4>}
-                {width && <h4>Width: {width} </h4>}
-                {sternWidth && <h4>Stern Width: {sternWidth}</h4>}
-                {draft && <h4>Draft: {draft}</h4> }
+                {Object.keys(details).map(value => (
+                    <h4>{value.toUpperCase()}: {details[value]}</h4>
+                ))}
                 {description && <p>{description}</p>}
             </div>
         )}        
-        </>
+        </Link>
     )
 }
 

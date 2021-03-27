@@ -1,8 +1,11 @@
 import React from 'react';
+import About from '../about/about';
+import Listings from '../listings/listings';
 import "./home.scss";
 
 const Home = () => {
     return (
+        <>
         <section className="hero">
             <div className="hero__overlay">
                 <div className="hero__text-container">
@@ -15,6 +18,9 @@ const Home = () => {
                 </div>
             </div>
         </section>
+        <Listings />
+        <About />
+        </>
     )
 }
 

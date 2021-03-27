@@ -9,7 +9,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  margin: 0 8px 8px 0;
+  margin: 8px;
 
   &.home {
     justify-content: flex-end;
@@ -27,11 +27,11 @@
     }
 
     &__title {
-      @include set_overlay(180deg, 0.2, 0.4);
+      @include set_overlay(180deg, 0.1, 0.3);
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
-      height: 100%;
+      height: $home_card_height;
       width: 100%;
       border: none;
       outline: none;
@@ -45,6 +45,7 @@
 
   &.listing {
     background-color: $white;
+    color: $black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     min-width: 300px;
     min-height: 450px;
