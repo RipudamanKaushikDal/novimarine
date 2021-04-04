@@ -4,7 +4,7 @@ import "./cards.scss"
 
 const Cards = ({type,cardClass,imageUrl,title,description,details}) => {
     return (
-        <Link to={`search/${cardClass}`}>
+        <Link to={cardClass? `search/${cardClass}`: '#'}>
         {type === "home" ? (
             <div className={`card ${type}`} style={{backgroundImage:`url(${imageUrl})`}}>
                 <div className={`card ${type}__title`}>

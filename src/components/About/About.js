@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import GlobalContext from '../../context/global-context'
 import "./about.scss"
 
 const About = () => {
+
+    const {aboutRef} = useContext(GlobalContext)
+
     return (
         <>
-        <div className="parallax">
+        <div className="parallax" ref={aboutRef}>
             <div className="parallax__overlay" />
         </div>
         <div className="about">

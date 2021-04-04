@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import GlobalContext from '../../context/global-context'
 import Cards from '../cards/cards'
 import "./listings.scss"
 
 const Listings = () => {
+
+    const {listRef} = useContext(GlobalContext)
 
     const testData = [{imageUrl:"https://images.pexels.com/photos/285937/pexels-photo-285937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
                         title:"Commercial Boats",
@@ -21,7 +24,7 @@ const Listings = () => {
             class:"equipment"
         }]
     return (
-        <section className="listings">
+        <section className="listings" ref={listRef}>
 
         <h1>Browse Listings</h1>
         <div className="listings__row">

@@ -58,12 +58,12 @@ const Search = () => {
     const {category} = useParams()
     return (
         <section className="search">
-            <div className="search__bar">
-                <input type="text" placeholder="Search the listing id" />
-            </div>
+            <input type="text" placeholder="Search the listing id" className="search__bar" />
+
+            {category !== null && 
             <div className="search__results">
                 <Cards type="listing" {...testList?.[category]} />
-            </div>
+            </div>}
         </section>
     )
 }

@@ -1,10 +1,12 @@
-import React,{useState,useEffect} from 'react'
-import { useLocation } from 'react-router';
+import React,{useState,useEffect, useContext} from 'react'
+import { useLocation,NavLink } from 'react-router-dom';
+import GlobalContext from '../../context/global-context';
 import "./navbar.scss"
 
 const Navbar = () => {
 
   const [shownav, setShownav] = useState(false);
+  const {heroRef,aboutRef,listRef} = useContext(GlobalContext)
   const location = useLocation()
 
   useEffect(() => {
@@ -20,6 +22,9 @@ const Navbar = () => {
     };
   }, []);
 
+  const scrollOptions= {behavior: "smooth", block: "center", inline: "nearest"}
+
+
     return (
         <div className={location.pathname==="/"? `navbar ${shownav && 'navbar__visible'}`: 'navbar navbar__visible'}>
           <div className="navbar__logo">
@@ -27,10 +32,9 @@ const Navbar = () => {
             <h2>NOVI MARINE</h2>
           </div>
           <div className="navbar__links">
-            <p>Home</p>
-            <p>Listings</p>
-            <p>About</p>
-            <p>Contact</p>
+            <p onClick={() => heroRef.current.scrollIntoView(scrollOptions)}>Home</p>
+            <p onClick={() => listRef.current.scrollIntoView(scrollOptions)}>Listing</p>
+            <p onClick={() => aboutRef.current.scrollIntoView(scrollOptions)}>About</p>
           </div>
         </div>
     )
