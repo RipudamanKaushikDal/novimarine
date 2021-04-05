@@ -1,25 +1,22 @@
 import React from 'react'
-import './App.scss';
 import ContextProvider from './context/global-provider'
-import {BrowserRouter as Router,Switch,Route} from "react-router-dom"
+import {useRoutes} from 'hookrouter';
+import './App.scss';
 import Footer from './components/footer/footer';
-import Home from './components/home/home'
 import Navbar from './components/navbar/navbar';
-import Search from './components/search/search';
+import routes from './routes';
 
 function App() {
+
+  const routeResults = useRoutes(routes)
+
   return (
     <div className="App">
-      <Router>
         <ContextProvider>
           <Navbar />
-            <Switch>
-              <Route path="/" component={Home} exact />
-              <Route path="/search/:category" component={Search} />
-            </Switch>
+            {routeResults}
           <Footer />
         </ContextProvider>
-      </Router>
     </div>
   );
 }

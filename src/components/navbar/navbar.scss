@@ -8,7 +8,7 @@
   width: 100%;
   height: 60px;
   z-index: 1;
-  transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
   color: $white;
 
   &__visible {
@@ -20,6 +20,13 @@
       #0f2027
     ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #2c5364, #203a43, #0f2027);
+
+    .navbar__links {
+      a:hover,
+      div:hover {
+        background-color: #203a43;
+      }
+    }
   }
 
   &__logo {
@@ -37,19 +44,30 @@
   }
 
   &__links {
-    align-items: center;
     display: flex;
+    height: 100%;
     justify-content: space-evenly;
     margin: 0 12px;
 
-    &--active {
-      border-bottom: 1px solid white;
+    a {
+      padding: 16px 8px 0 8px;
+      color: $white;
+
+      &:active {
+        border-bottom: 3px solid $white;
+      }
     }
 
-    p {
+    div {
       color: $white;
-      margin: 0 12px;
       cursor: pointer;
+      height: 100%;
+      margin: 0 8px;
+      padding: 0 8px;
+
+      &:active {
+        border-bottom: 3px solid $white;
+      }
     }
   }
 }

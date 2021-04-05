@@ -8,7 +8,9 @@ const Footer = () => {
                 <img src="https://novimarinebrokers.com/images/4/logo_bot.jpg" />
             </div>
             <div className="footer__details">
+
                 <span>
+                    Address : <br />
                     674 Main St <br/>
                     Yarmouth, Nova Scotia <br />
                     Canada B5A 1K3

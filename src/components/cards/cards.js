@@ -1,10 +1,10 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {A} from 'hookrouter'
 import "./cards.scss"
 
 const Cards = ({type,cardClass,imageUrl,title,description,details}) => {
     return (
-        <Link to={cardClass? `search/${cardClass}`: '#'}>
+        <A href={cardClass? `/search/${cardClass}`: '#'}>
         {type === "home" ? (
             <div className={`card ${type}`} style={{backgroundImage:`url(${imageUrl})`}}>
                 <div className={`card ${type}__title`}>
@@ -21,7 +21,7 @@ const Cards = ({type,cardClass,imageUrl,title,description,details}) => {
                 {description && <p>{description}</p>}
             </div>
         )}        
-        </Link>
+        </A>
     )
 }
 
