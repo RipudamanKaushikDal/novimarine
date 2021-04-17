@@ -17,7 +17,7 @@ const Search = ({category}) => {
 
             {category !== ":category" || null ?
             <div className="search__results">
-                <Cards type="listing" {...testList?.[category]} />
+                <Cards type="listing" cardClass={category} {...testList?.[category]} />
             </div> : null}
         </section>
     )
