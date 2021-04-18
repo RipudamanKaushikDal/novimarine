@@ -7,12 +7,12 @@ const SlideShow = ({imageCollection}) => {
 
     return (
         <section className="slideshow">
-            <img src={pictureUrl} alt="Selected Image" className="slideshow__image--selected" />
             <div className="slideshow__thumbnails">
                 {imageCollection.map(uri => (
                     <img src={uri} alt="thumbnail" onClick={() => setPictureUrl(uri)} key={uri} />
                 ))}
             </div>
+            <img src={pictureUrl} alt="Selected Image" className="slideshow__image--selected" />
         </section>
     )
 }

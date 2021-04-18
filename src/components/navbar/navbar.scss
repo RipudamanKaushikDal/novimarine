@@ -49,24 +49,24 @@
     justify-content: space-evenly;
     margin: 0 12px;
 
-    a {
-      padding: 16px 8px 0 8px;
-      color: $white;
-
-      &:active {
-        border-bottom: 3px solid $white;
-      }
-    }
-
     div {
+      align-items: center;
+      display: flex;
       color: $white;
       cursor: pointer;
       height: 100%;
       margin: 0 8px;
       padding: 0 8px;
 
+      a {
+        color: $white;
+        &:active {
+          color: dodgerblue;
+        }
+      }
+
       &:active {
-        border-bottom: 3px solid $white;
+        color: dodgerblue;
       }
     }
   }

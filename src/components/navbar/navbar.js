@@ -1,13 +1,16 @@
 import React,{useState,useEffect, useContext} from 'react'
 import {usePath,A} from 'hookrouter';
 import GlobalContext from '../../context/global-context';
+import HomeIcon from '@material-ui/icons/Home';
+import DnsIcon from '@material-ui/icons/Dns';
+import BusinessIcon from '@material-ui/icons/Business';
+import SearchIcon from '@material-ui/icons/Search';
 import "./navbar.scss"
 
 const Navbar = () => {
 
   const [shownav, setShownav] = useState(false);
   const {heroRef,aboutRef,listRef} = useContext(GlobalContext)
-  //const location = useLocation()
   const path = usePath()
 
   useEffect(() => {
@@ -37,15 +40,33 @@ const Navbar = () => {
             path === "/" ? 
             (
               <div className="navbar__links">
-                <div onClick={() => heroRef.current.scrollIntoView(scrollOptions)}><p>Home</p></div>
-                <div onClick={() => listRef.current.scrollIntoView(scrollOptions)}><p>Listing</p></div>
-                <div onClick={() => aboutRef.current.scrollIntoView(scrollOptions)}><p>About</p></div>
-                <A href="/search/:category">Search</A>
+                <div onClick={() => heroRef.current.scrollIntoView(scrollOptions)}>
+                  <HomeIcon />
+                  <p>Home</p>
+                </div>
+                <div onClick={() => listRef.current.scrollIntoView(scrollOptions)}>
+                  <DnsIcon />
+                  <p>Listing</p>
+                </div>
+                <div onClick={() => aboutRef.current.scrollIntoView(scrollOptions)}>
+                  <BusinessIcon />
+                  <p>About</p>
+                </div>
+                <div>
+                  <SearchIcon />
+                  <A href="/search/:category">Search</A>
+                </div>
               </div>
             ) : (
               <div className="navbar__links">
-                <A href="/">Home</A>
-                <A href="/search/:category">Search</A>
+                <div>
+                  <HomeIcon />
+                  <A href="/">Home</A>
+                </div>
+                <div>
+                  <SearchIcon />
+                  <A href="/search/:category">Search</A>
+                </div>
               </div>
             )
           }

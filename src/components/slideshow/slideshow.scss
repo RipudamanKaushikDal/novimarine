@@ -2,9 +2,8 @@
 
 .slideshow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
-  align-items: center;
 
   &__image--selected {
     height: 360px;
@@ -13,13 +12,21 @@
   }
 
   &__thumbnails {
+    cursor: pointer;
     display: flex;
-    margin: 30px 10px;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 10px;
     width: fit-content;
 
     img {
-      width: 120px;
-      height: 80px;
+      border: 1px solid gray;
+      width: 100px;
+      height: 60px;
+
+      &:hover {
+        box-shadow: 0 0 8px 3px #2a94eb;
+      }
     }
   }
 }
