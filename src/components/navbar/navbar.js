@@ -52,21 +52,27 @@ const Navbar = () => {
                   <BusinessIcon />
                   <p>About</p>
                 </div>
-                <div>
-                  <SearchIcon />
-                  <A href="/search/:category">Search</A>
-                </div>
+                <A href="/search/:category">
+                  <div>
+                    <SearchIcon />
+                    Search
+                  </div>
+                </A>
               </div>
             ) : (
               <div className="navbar__links">
-                <div>
-                  <HomeIcon />
-                  <A href="/">Home</A>
-                </div>
-                <div>
-                  <SearchIcon />
-                  <A href="/search/:category">Search</A>
-                </div>
+                <A href="/">
+                  <div>
+                    <HomeIcon />
+                    Home
+                  </div>
+                </A>
+                <A href="/search/:category">
+                  <div>
+                    <SearchIcon />
+                    Search
+                  </div>
+                </A>
               </div>
             )
           }

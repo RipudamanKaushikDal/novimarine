@@ -6,7 +6,7 @@ const Cards = ({type,cardClass,imageUrl,title,description,details}) => {
     return (
         <>
         {type === "home" ? (
-            <A href={cardClass&&`/search/${cardClass}`}>
+            <A href={cardClass && `/search/${cardClass}`}>
                 <div className={`card ${type}`} style={{backgroundImage:`url(${imageUrl})`}}>
                     <div className={`card ${type}__title`}>
                         {title}

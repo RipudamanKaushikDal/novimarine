@@ -16,19 +16,20 @@
     flex-direction: column;
 
     span {
-      font-size: 28px;
+      font-size: $subtitle_font_size;
       font-weight: 600;
     }
 
     p {
-      margin: 5px;
+      margin: 10px 5px;
+      font-size: $detail_font_size;
     }
   }
 
   &__social {
     cursor: pointer;
     display: flex;
-    margin: 5px;
+    margin: 10px 5px;
     gap: 8px;
     align-items: center;
   }

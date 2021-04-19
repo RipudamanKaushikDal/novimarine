@@ -3,10 +3,16 @@ $charcoal: #141414;
 $black: rgb(73, 70, 70);
 $white: rgb(249, 249, 250);
 $sea_blue: #76daff;
+$shadow_blue: #2a94eb;
 
 // Dimensions
 $home_card_width: 220px;
 $home_card_height: 320px;
+
+// Fonts
+$title_font_size: 48px;
+$subtitle_font_size: 28px;
+$detail_font_size: 16px;
 
 @mixin set_overlay($direction, $alpha1, $alpha2) {
   background: linear-gradient(
