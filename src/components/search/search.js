@@ -7,6 +7,8 @@ const Search = ({category}) => {
 
     const searchRef = useRef(null)
 
+    const repeatArray = ["1","2","3"]
+
     useEffect (() => {
         searchRef.current.scrollIntoView({block: "center", inline: "nearest"})
     },[])
@@ -17,7 +19,9 @@ const Search = ({category}) => {
 
             {category !== ":category" || null ?
             <div className="search__results">
-                <Cards type="listing" cardClass={category} {...testList?.[category]} />
+                {repeatArray.map(val => (
+                    <Cards type="listing" key={val} cardClass={category} {...testList?.[category]} />
+                ))}
             </div> : null}
         </section>
     )

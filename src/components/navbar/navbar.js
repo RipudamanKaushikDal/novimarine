@@ -31,13 +31,13 @@ const Navbar = () => {
 
 
     return (
-        <div className={path==="/"? `navbar ${shownav && 'navbar__visible'}`: 'navbar navbar__visible'}>
+        <div className={path==="/novimarine"? `navbar ${shownav && 'navbar__visible'}`: 'navbar navbar__visible'}>
           <div className="navbar__logo">
             <img src = "https://novimarinebrokers.com/images/4/logo_bot.jpg" alt = "logo" />  
             <h2>NOVI MARINE</h2>
           </div>
           {
-            path === "/" ? 
+            path === "/novimarine" ? 
             (
               <div className="navbar__links">
                 <div onClick={() => heroRef.current.scrollIntoView(scrollOptions)}>
@@ -61,7 +61,7 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="navbar__links">
-                <A href="/">
+                <A href="/novimarine">
                   <div>
                     <HomeIcon />
                     Home

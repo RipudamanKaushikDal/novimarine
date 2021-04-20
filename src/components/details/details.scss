@@ -15,14 +15,22 @@
     display: flex;
     flex-direction: column;
 
-    span {
+    h1 {
+      font-size: $title_font_size;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    h2 {
       font-size: $subtitle_font_size;
       font-weight: 600;
+      margin-top: 10px;
     }
 
     p {
       margin: 10px 5px;
       font-size: $detail_font_size;
+      font-weight: 600;
     }
   }
 

@@ -15,8 +15,8 @@ const Details = ({category,id}) => {
         <section className="details">
             <SlideShow imageCollection={selectedProduct.imageUrl} />
             <div className="details__info">
-                <span>{selectedProduct.title}</span>
-                <span>{selectedProduct.details.price}</span>
+                <h1>{selectedProduct.title}</h1>
+                <h2>{selectedProduct.details.price}</h2>
                 <div className="details__social">
                     <FacebookIcon fontSize="large" color="primary" />
                     <InstagramIcon fontSize="large" color="secondary" />
