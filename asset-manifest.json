@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/novimarine/static/css/main.f1a384a3.chunk.css",
-    "main.js": "/novimarine/static/js/main.1410cd45.chunk.js",
-    "main.js.map": "/novimarine/static/js/main.1410cd45.chunk.js.map",
+    "main.js": "/novimarine/static/js/main.cafd314c.chunk.js",
+    "main.js.map": "/novimarine/static/js/main.cafd314c.chunk.js.map",
     "runtime-main.js": "/novimarine/static/js/runtime-main.09314519.js",
     "runtime-main.js.map": "/novimarine/static/js/runtime-main.09314519.js.map",
     "static/js/2.aaac3cd7.chunk.js": "/novimarine/static/js/2.aaac3cd7.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.09314519.js",
     "static/js/2.aaac3cd7.chunk.js",
     "static/css/main.f1a384a3.chunk.css",
-    "static/js/main.1410cd45.chunk.js"
+    "static/js/main.cafd314c.chunk.js"
   ]
 }
