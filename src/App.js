@@ -8,7 +8,8 @@ import routes from './routes';
 
 function App() {
 
-  const routeResults = useRoutes(routes)
+  const routeResults = useRoutes(routes);
+  
 
   return (
     <div className="App">

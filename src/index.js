@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
+import {setBasepath} from "hookrouter"
 import reportWebVitals from './reportWebVitals';
+
+// Sets the base path to match with static web hosting
+setBasepath("/novimarine");
 
 ReactDOM.render(
     <App />,
