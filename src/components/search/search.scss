@@ -4,9 +4,13 @@
   background: $white;
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
-  height: 100vh;
+  margin: 70px 10px 20px 10px;
+  height: 100%;
   width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    height: 100vh;
+  }
 
   &__bar {
     width: 70%;
@@ -49,5 +53,6 @@
     display: flex;
     margin: 10px;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }

@@ -7,6 +7,7 @@ const Search = ({category}) => {
 
     const searchRef = useRef(null)
 
+    // Test Array to repeat the elements
     const repeatArray = ["1","2","3"]
 
     useEffect (() => {
@@ -22,7 +23,7 @@ const Search = ({category}) => {
                 {repeatArray.map(val => (
                     <Cards type="listing" key={val} cardClass={category} {...testList?.[category]} />
                 ))}
-            </div> : null}
+            </div> : <div style={{height:'80vh',width:'100%'}} />}
         </section>
     )
 }

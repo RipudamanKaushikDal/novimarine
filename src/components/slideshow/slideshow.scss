@@ -6,6 +6,7 @@
   height: 100%;
 
   &__image--selected {
+    align-self: flex-start;
     height: 60%;
     width: 80%;
     object-fit: contain;
