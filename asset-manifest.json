@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/novimarine/static/css/main.99586074.chunk.css",
+    "main.css": "/novimarine/static/css/main.e08c0b40.chunk.css",
     "main.js": "/novimarine/static/js/main.d46f2ba2.chunk.js",
     "main.js.map": "/novimarine/static/js/main.d46f2ba2.chunk.js.map",
     "runtime-main.js": "/novimarine/static/js/runtime-main.09314519.js",
@@ -10,7 +10,7 @@
     "static/js/3.270608d3.chunk.js": "/novimarine/static/js/3.270608d3.chunk.js",
     "static/js/3.270608d3.chunk.js.map": "/novimarine/static/js/3.270608d3.chunk.js.map",
     "index.html": "/novimarine/index.html",
-    "static/css/main.99586074.chunk.css.map": "/novimarine/static/css/main.99586074.chunk.css.map",
+    "static/css/main.e08c0b40.chunk.css.map": "/novimarine/static/css/main.e08c0b40.chunk.css.map",
     "static/js/2.23ae8361.chunk.js.LICENSE.txt": "/novimarine/static/js/2.23ae8361.chunk.js.LICENSE.txt",
     "static/media/about.scss": "/novimarine/static/media/About.1d66a6be.jpg",
     "static/media/hero.scss": "/novimarine/static/media/background.f34a8fa6.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.09314519.js",
     "static/js/2.23ae8361.chunk.js",
-    "static/css/main.99586074.chunk.css",
+    "static/css/main.e08c0b40.chunk.css",
     "static/js/main.d46f2ba2.chunk.js"
   ]
 }
